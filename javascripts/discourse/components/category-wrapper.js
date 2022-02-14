@@ -92,7 +92,7 @@ export default Component.extend({
     }
   },
   
-  @discourseComputed("categoryInfo.category_image")
+  @discourseComputed("categoryInfo.uploaded_logo")
   topicCount(uploaded_logo) {
 	console.log("+++", uploaded_logo)
     return uploaded_logo.url;
