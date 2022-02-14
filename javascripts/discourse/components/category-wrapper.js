@@ -26,6 +26,7 @@ export default Component.extend({
 
   @discourseComputed("category")
   categoryInfo(category) {
+	console.log("====", this.site.categories)
     return this.site.categories.findBy("id", category.id);
   },
 
