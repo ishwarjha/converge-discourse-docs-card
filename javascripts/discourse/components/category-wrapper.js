@@ -26,7 +26,6 @@ export default Component.extend({
 
   @discourseComputed("category")
   categoryInfo(category) {
-	console.log("====", this.site.categories)
     return this.site.categories.findBy("id", category.id);
   },
 
@@ -91,5 +90,11 @@ export default Component.extend({
     } else {
       return `${count} ${I18n.t(themePrefix("topic"))}`;
     }
+  },
+  
+  @discourseComputed("categoryInfo.category_image")
+  topicCount(uploaded_logo) {
+	console.log("+++", uploaded_logo)
+    return uploaded_logo.url;
   },
 });
